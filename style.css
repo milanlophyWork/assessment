@@ -183,11 +183,19 @@ body{
     .header_options_bar{
         display: none;
     }
+    .banner_body{
+        padding: 48px 20px 24px;
+    }
+    .banner_txt h1{
+        font-size: 80px;
+        line-height: 80px;
+        /* font-weight: 500; */
+    }
 }
 
 @media screen and (min-width: 768px) {
     .header_title{
-        padding: 16px 20px;
+        padding: 12px 20px;
     }
 }
 
