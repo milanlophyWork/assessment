@@ -1,0 +1,300 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 16px;
+    padding: 16px 20px;
+    color: white;
+    background: #191c1f;
+}
+.close_btn{
+    margin: 0;
+    padding: 0;
+    background: rgb(80, 90, 99);
+    border: none;
+    color: #505A63;
+    cursor: pointer;
+}
+.header_txt_bar{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 270.44px;
+    width: 100%;
+    min-height: 42px;
+}
+.logo_bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+}
+/* .header_logo{
+    background-color: white;
+    border-radius: 12px;
+} */
+.header_txt{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    /* min-width: 91.31px; */
+    min-height: 42px;
+    /* width: 100%; */
+}
+.header_txt span{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: normal;
+    margin-right: 8px;
+}
+.header_rating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+   
+}
+.star_bar{
+    display: flex;
+    gap: 0;
+}
+.star{
+    width: 12px;
+    height: 12px;
+    background-color: #fbc70a;
+    mask-image: 'https://assets.revolut.com/assets/icons/StarFilled.svg';
+}
+.header_rating span{
+    color: rgb(113,113,115);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .18px;
+    line-height: 18px;
+}
+.get_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 58.56px;
+    height: 30px;
+    width: 100%;
+    border:none;
+    border-radius: 9999px;
+    background-color: white;
+    padding: 6px 16px;
+    cursor: pointer;
+}
+.get_btn span{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 22px;
+}
+
+.banner{
+    background: linear-gradient(rgb(76 138 204) 0%,rgb(57 145 216) 100%);
+}
+.header_title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+}
+.main_title_bar{
+    display: flex;
+    align-items: center;
+
+    min-height: 32px;
+    height: 100%;
+}
+.main_title{
+    height: 24px;
+    fill: white;
+}
+.menu_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    fill: white;
+}
+
+.banner_body{
+    padding: 30px 20px 24px;
+    color: white;
+}
+.banner_txt{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.banner_txt h1{
+    margin: 0;
+    padding: 0;
+    font-size: 36.855px;
+    font-weight: 600;
+    line-height: 36.855px; 
+}
+.banner_txt p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 24px;
+}
+.banner_txt button{
+    display: flex;
+    max-width: 181.54px;
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 24px;
+    background: #191c1f;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    align-items: center;
+    justify-content: center;
+}
+.dwld_btn{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: normal;
+
+}
+@media screen and (max-width: 768px){
+    .header_options_bar{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header_title{
+        padding: 16px 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header{
+        padding: 16px 12px;
+    }
+    .menu{
+        display: none;
+    }
+    .header_title{
+        padding: 16px 12px;
+        justify-content: space-between;
+    }
+    .main_title{
+        height: 21px;
+    }
+    .header_options_bar{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        margin: 0 0 0 32px;
+        column-gap: 16px;
+        width: 100%;
+    }
+    .header_options{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+
+    }
+    .header_options button, .header_login{
+        background: none;
+        border: none;
+        color: white;
+        padding: 8px 10px;
+        margin: 0 4px;
+        cursor: pointer;
+    }
+    .btn_style{
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: normal;
+        line-height: 22px;
+    }
+    .header_btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+    .header_btns button{
+        margin: 0;
+        padding: 10px 24px;
+        cursor: pointer;
+    }
+    .header_signUp{
+        border: none;
+        border-radius: 9999px;
+        background: rgb(244,244,244);
+    }
+    
+}
+
+
+@media screen and (min-width: 1440px){
+   .header, .header_title{
+        padding: 16px 220px;
+   } 
+   .header_options button{
+        margin: 0 4px;
+        padding: 8px 20px;
+   }
+}
+
+@media screen and (min-width: 2560px){
+   .header, .header_title{
+        padding: 16px 564px;
+   } 
+   .header_txt span{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .header_rating span{
+        font-size: 16px;
+        letter-spacing: 0.24px;
+        line-height: 24px;
+    }
+    .get_btn{
+        min-width: 65.2px;
+    }
+    .get_btn span{
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .main_title{
+        height: 28px;
+    }
+    .btn_style{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .header_options button{
+        padding: 8px 24px;
+    }
+    .header_btns button{
+        padding: 14px 32px;
+    }
+}
