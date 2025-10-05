@@ -6,11 +6,12 @@
     font-family: "bold";
     src: url('./font/AeonikPro-Medium.woff2');
 }
-
+ */
 @font-face {
     font-family: "semibold";
-    src: url('./font/Inter-SemiBold.woff2');
-} */
+    src: url('./font/Inter-Regular.woff2');
+} 
+
 body{
     margin: 0;
     padding: 0;
@@ -29,16 +30,21 @@ body{
 .close_btn{
     margin: 0;
     padding: 0;
+    width: 37px;
+    height: 24px;
+    mask-image: url('https://assets.revolut.com/assets/icons/Cross.svg');
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
     background: rgb(80, 90, 99);
     border: none;
-    color: #505A63;
+    color: #505a63; 
     cursor: pointer;
 }
 .header_txt_bar{
     display: flex;
     align-items: center;
     gap: 16px;
-    min-width: 270.44px;
+    min-width: 220.44px;
     width: 100%;
     min-height: 42px;
 }
@@ -51,7 +57,6 @@ body{
     width: 40px;
     height: 40px;
 }
-
 .header_txt{
     display: flex;
     flex-direction: column;
@@ -82,14 +87,32 @@ body{
 .star{
     width: 12px;
     height: 12px;
-    background-color: #fbc70a;
-    mask-image: 'https://assets.revolut.com/assets/icons/StarFilled.svg';
+    background: rgba(251, 199, 10, 1);
+    mask-image: url('https://assets.revolut.com/assets/icons/StarFilled.svg');
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    color: #fbc70a;
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
 }
-.header_rating span{
+.half{
+    width: 12px;
+    height: 12px;
+    background-color: rgba(251, 199, 10, 1);
+    mask-size: 100% 100%;
+    color: #fbc70a;
+    mask-image: url('https://assets.revolut.com/assets/icons/StarSemi.svg'); 
+}
+.rating_txt{
+    margin: 0;
+    padding: 0;
     color: rgb(113,113,115);
+    font-family: 'semibold';
     font-size: 12px;
     font-weight: 400;
-    letter-spacing: .18px;
+    letter-spacing: 0.18px;
     line-height: 18px;
 }
 .get_btn{
@@ -106,6 +129,7 @@ body{
     cursor: pointer;
 }
 .get_btn span{
+    font-family: 'regular';
     font-size: 16px;
     font-weight: 500;
     letter-spacing: normal;
@@ -113,8 +137,11 @@ body{
 }
 
 .banner{
+    position: relative;
+    z-index: 1;
     background: linear-gradient(rgb(76 138 204) 0%,rgb(57 145 216) 100%);
 }
+
 .header_title{
     display: flex;
     align-items: center;
@@ -124,13 +151,16 @@ body{
 .main_title_bar{
     display: flex;
     align-items: center;
-
     min-height: 32px;
     height: 100%;
 }
 .main_title{
+    font-family: 'regular';
+    font-size: 16px;
+    font-weight: 400;
     height: 24px;
     fill: white;
+    margin-top: -2px;
 }
 .menu_img{
     display: flex;
@@ -139,11 +169,19 @@ body{
 }
 
 .menu{
-    fill: white;
+    width: 24px;
+    height: 24px;
+    mask-image: url('https://assets.revolut.com/assets/icons/Menu.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: white;
 }
 
 .banner_body{
-    padding: 30px 20px 24px;
+    /* position: relative;
+    z-index: 1; */
+    min-height: 762px;
+    padding: 32px 20px 24px;
     color: white;
 }
 .banner_txt{
@@ -155,9 +193,9 @@ body{
 .banner_txt h1{
     margin: 0;
     padding: 0;
-    font-size: 36.855px;
+    font-size: 36px;
     font-weight: 500;
-    line-height: 36.855px; 
+    line-height: 1; 
 }
 .banner_txt p{
     margin: 0;
@@ -181,62 +219,218 @@ body{
     justify-content: center;
 }
 .dwld_btn{
+    font-family: 'regular';
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
     letter-spacing: normal;
 
 }
-@media screen and (max-width: 768px){
+.banner_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+    height: 100%;
+}
+.banner_woman{
+    color: transparent;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    transform-origin: 50% 100%;
+    min-width: 1761.97px;
+    width: 100%;
+    min-height: 978.875px;
+    height: 100%;    
+}
+
+.banner_woman_bg{
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    width: 100%;
+    height:100%;
+    /* transition-timing-function:cubic-bezier(0.35, 0, 0, 1); */
+    transition-property: transform;
+    transform: translate(-50%, 0px) scale(1.75);
+    transform-origin: 50% 100%;
+    color: transparent;
+    object-fit: cover;
+    object-position: center bottom;
+}
+.banner_salary_bar{
+    position: relative;
+    border: 3px solid #c9c9cd;
+    overflow: hidden;
+    border-radius: 21.85px;
+    min-width: 329px;
+    min-height: 464.25px;
+    height: 100%;
+    margin-top: 32px;
+
+}
+.banner_salary_bar img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    overflow: hidden;
+}
+
+/* Card section */
+
+.card_bar{
+    padding: 48px 20px;
+}
+.card_txt{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+.card_title h2{ 
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1;
+}
+.card_para p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: start;
+}
+.card_btn{
+    margin-top: 16px;
+    padding: 10px 24px;
+    background: #191c1f;
+    color: white;
+    min-width: 171.23px;
+    min-height: 42px;
+    width: min-content;
+    border: none;
+    border-radius: 9999px;
+}
+.card_btn span{
+    font-family: 'regular';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
+@media screen and (min-width: 425px){
+   .header_txt_bar{
+    min-width: 270.44px;
+   }
+   .banner_body{
+    min-height: 808.52px;
+   }
+   .banner_txt h1{
+    font-size: 36.855px;
+   }
+   .banner_salary_bar{
+    min-width: 379px;
+    min-height: 534.797px;
+   }
+}
+
+
+@media screen and (max-width: 1024px){
     .header_options_bar{
         display: none;
     }
-   
+    .banner_woman_1024{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 768px) {
+    .close_btn{
+        width: 28.5px;
+    }
     .header_title{
         padding: 12px 20px;
     }
     .banner_body{
+        min-height: 955.315px;
         padding: 48px 20px 24px;
+    }
+    .banner_txt{
+        gap: 24px;
     }
     .banner_txt h1{
         font-size: 80px;
-        line-height: 80px;
-        /* font-weight: 500; */
+        line-height: 1;
+        font-weight: 500;
+        letter-spacing: -2.08px;
+    }
+    .banner_txt p{
+        font-weight: 400;
+    }
+    .banner_woman{
+        height: 0%;
+    }
+    .banner_salary_bar{
+        max-width: 427.547px;
+        min-height: 603.312px;
+        /* 609.312, 433.547 */
+        margin-left: 147px;
+    }
+    .card_txt{
+        align-items: center;
+    }
+    .card_title h2{
+        font-size: 48px;
+        letter-spacing: -0.6px;
+    }
+    .card_para p{
+        text-align: center;
     }
 }
 
 @media screen and (min-width: 1024px) {
+    .close_btn{
+        width: 27.12px;
+    }
     .header{
         padding: 16px 12px;
+    }
+    .main_title{
+        min-width: 94.94px;
+        width: 100%;
     }
     .menu{
         display: none;
     }
     .header_title{
-        padding: 16px 12px;
+        padding: 15px 12px;
         justify-content: space-between;
     }
-    .main_title{
-        height: 21px;
-    }
     .header_options_bar{
+        font-family: 'regular';
         display: grid;
         grid-template-columns: 1fr auto;
         align-items: center;
         margin: 0 0 0 32px;
         column-gap: 16px;
+        /* min-width: 873.06px; */
         width: 100%;
     }
     .header_options{
         display: flex;
         align-items: center;
         justify-content: start;
-
+        /* min-width: 646.72px; */
+        width: 100%;
     }
     .header_options button, .header_login{
+        font-family: 'regular';
         background: none;
         border: none;
         color: white;
@@ -245,6 +439,7 @@ body{
         cursor: pointer;
     }
     .btn_style{
+        font-family: 'regular';
         font-size: 16px;
         font-weight: 500;
         letter-spacing: normal;
@@ -266,21 +461,67 @@ body{
         border-radius: 9999px;
         background: rgb(244,244,244);
     }
-    
+    .banner_body{
+        min-height: 730px;
+        padding: 0;
+    }
+    .banner_txt{
+        padding: 48px 12px 24px;
+    }
+    .banner_txt h1{
+        font-size: 82.39px;
+        letter-spacing: -2.08px;
+    }
+    .banner_txt p{
+        width: 40%;
+    }
+    .banner_woman{
+        /* display: none; */
+        min-width: 1753.86px;
+        min-height: 973.92px;
+        zoom: 110%;
+        top: -179px;
+        height: 100%;
+    }
+    .banner_woman_1024{
+        display: block;
+        position: absolute;
+        left: -50%;
+        top: -218px;
+        
+    }
+    .banner_salary_bar{
+        min-width: 433.55px;
+        min-height: 611.8px;
+    }
+
 }
 
 
 @media screen and (min-width: 1440px){
-   .header, .header_title{
+   .header{
         padding: 16px 220px;
    } 
+   .header_title{
+        padding:  15px 220px;
+   }
    .header_options button{
         margin: 0 4px;
         padding: 8px 20px;
    }
+   .banner_txt{
+        padding: 48px 220px 24px;
+   }
+   .banner_txt h1{
+        font-size: 89.216px;
+
+   }
 }
 
 @media screen and (min-width: 2560px){
+    .close_btn{
+        width: 26.2px;
+    }
    .header, .header_title{
         padding: 16px 564px;
    } 
@@ -289,6 +530,11 @@ body{
         line-height: 28px;
     }
     .header_rating span{
+        font-size: 16px;
+        letter-spacing: 0.24px;
+        line-height: 24px;
+    }
+    .rating_txt{
         font-size: 16px;
         letter-spacing: 0.24px;
         line-height: 24px;
@@ -302,7 +548,7 @@ body{
     }
 
     .main_title{
-        height: 28px;
+        height: 32px;
     }
     .btn_style{
         font-size: 20px;
@@ -313,5 +559,32 @@ body{
     }
     .header_btns button{
         padding: 14px 32px;
+    }
+    .banner_body{
+        min-height: 1367px;
+    }
+    .banner_txt{
+        gap: 40px;
+        padding: 80px 564px 32px;
+    }
+    .banner_txt h1{
+        font-size: 136px;
+        letter-spacing: -2.72px;
+    }
+    .banner_txt p{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .banner_txt button{
+        padding: 14px 32px;
+        max-width: 230.91px;
+    }
+    .dwld_btn{
+        font-size: 20px;
+        line-height: 28px;
+
+    }
+    .banner_woman{
+        zoom: 183%;
     }
 }
