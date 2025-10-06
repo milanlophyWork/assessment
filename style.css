@@ -324,6 +324,24 @@ body{
     font-weight: 500;
     line-height: 22px;
 }
+
+/* .cards{
+    position: relative;
+    width: 232px;
+    height: 327.378px;
+
+}
+.card_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+}
+.card_img1{
+    position: absolute;
+    height: 1;
+} */
 @media screen and (min-width: 425px){
    .header_txt_bar{
     min-width: 270.44px;
@@ -393,7 +411,14 @@ body{
         text-align: center;
     }
 }
-
+@media screen and (min-width: 850px) {
+    .banner_salary_bar{
+        margin-left: 188px;
+    }
+    .banner_salary_bar img{
+        top: 0;
+    }
+}   
 @media screen and (min-width: 1024px) {
     .close_btn{
         width: 27.12px;
@@ -462,7 +487,7 @@ body{
         background: rgb(244,244,244);
     }
     .banner_body{
-        min-height: 730px;
+        min-height: 802px;
         padding: 0;
     }
     .banner_txt{
@@ -491,10 +516,14 @@ body{
         
     }
     .banner_salary_bar{
-        min-width: 433.55px;
-        min-height: 611.8px;
+        min-width: 428px;
+        min-height: 608.8px;
+        margin-left: 28.8%;
+        margin-top: -12.3%;
     }
-
+    .banner_salary_bar img{
+        top: -3px;
+    }
 }
 
 
@@ -515,6 +544,11 @@ body{
    .banner_txt h1{
         font-size: 89.216px;
 
+   }
+   .banner_salary_bar{
+    margin-left: 34.9%;
+    margin-top: -15.47%;
+    min-height: 606.8px;
    }
 }
 
@@ -586,5 +620,11 @@ body{
     }
     .banner_woman{
         zoom: 183%;
+    }
+    .banner_salary_bar{
+        min-width: 722.27px;
+        min-height: 1019.19px;
+        margin-top: -10%;
+        margin-left: 35%;
     }
 }
