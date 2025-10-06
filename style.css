@@ -397,7 +397,6 @@ body{
     .banner_salary_bar{
         max-width: 427.547px;
         min-height: 603.312px;
-        /* 609.312, 433.547 */
         margin-left: 147px;
     }
     .card_txt{
@@ -444,14 +443,12 @@ body{
         align-items: center;
         margin: 0 0 0 32px;
         column-gap: 16px;
-        /* min-width: 873.06px; */
         width: 100%;
     }
     .header_options{
         display: flex;
         align-items: center;
         justify-content: start;
-        /* min-width: 646.72px; */
         width: 100%;
     }
     .header_options button, .header_login{
@@ -501,7 +498,6 @@ body{
         width: 40%;
     }
     .banner_woman{
-        /* display: none; */
         min-width: 1753.86px;
         min-height: 973.92px;
         zoom: 110%;
