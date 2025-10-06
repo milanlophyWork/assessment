@@ -531,6 +531,92 @@ body{
     min-height: 58.40px;
 }
 
+/* video section */
+
+.video_bar{
+    padding: 48px 0;
+    background: black;
+    color: white;
+}
+.video_txt{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 232px;
+    padding: 0 20px;
+    margin: 0 0 24px;
+}
+.video_txt h2, .video_txt p{
+    margin: 0;
+    padding: 0;
+}
+.video_txt h2{
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+}
+.video_txt button{
+    font-family: 'regular';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 10px 24px;
+    min-width: 146.375px;
+    min-height: 42px;
+    width: min-content;
+    background: rgb(244,244,244);
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 388px;
+    width: 100%;
+    min-height: 388px;
+    position: relative;
+    overflow: hidden;
+}
+video{
+    height: auto;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: -350px;
+}
+.video_btn{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.video_btn button{
+    position: absolute;
+    font-family: 'regular';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    border-radius: 9999px;
+    padding: 10px 26px;
+
+}
+.physical_card{
+    background: rgb(244,244,244);
+    color: black;
+    border: none;
+    left: 5%;
+}
+.virtual_card{
+    border: 2px solid rgb(244,244,244);
+    color: rgb(244,244,244);
+    background: transparent;
+    right: 5%;
+
+}
 @media screen and (min-width: 425px){
    .header_txt_bar{
     min-width: 270.44px;
