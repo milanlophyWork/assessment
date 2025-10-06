@@ -284,7 +284,9 @@ body{
 /* Card section */
 
 .card_bar{
+    position: relative;
     padding: 48px 20px;
+    overflow: hidden;
 }
 .card_txt{
     display: flex;
@@ -325,23 +327,210 @@ body{
     line-height: 22px;
 }
 
-/* .cards{
+.cards{
     position: relative;
-    width: 232px;
-    height: 327.378px;
-
+    max-width: 232px;
+    min-height: 327.378px;
+    /* width: 100%; */
 }
-.card_img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    opacity: 1;
+.card_img0{
+    display: none;
 }
 .card_img1{
     position: absolute;
-    height: 1;
-} */
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
+    border: none;
+    border-radius: 20px;
+}
+
+.woman_bg{
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    transition-property: transform;
+    transform: translate(-50%, 0px) scale(1.75);
+    transform-origin: 50% 100%;
+    color: transparent;
+    object-fit: cover;
+    object-position: center bottom;
+}
+.woman_img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    min-width: 1031.39px;
+    min-height: 572.906px;
+    width: 100%;
+    transform: translateX(-50%) ;
+}
+.img1_salary img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0px;
+    color: transparent;
+}
+
+ .card_img2, .card_img0{ 
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
+    transform: translateX(16px) translateX(95%) scale(0.9);
+
+} 
+.man_img, .tea_img{
+    position: absolute;
+    height: 100%;
+    inset: 0;
+    color: transparent;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center bottom;
+
+}
+
+.dots{
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transform: translate(-50%, 24px);
+    color: #8d969e;
+}
+.dot_bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6px;
+    max-width: 32px;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+}
+.dot_bar .first{
+    list-style-type: none;
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+}
+.dot_bar .second, .dot_bar .third{
+    list-style-type: none;
+    opacity: 0.7;
+    width: 6px;
+    height: 6px;
+    /* transition: width 300ms cubic-bezier(0.15,0.5,0.5,1), 
+    height 300ms cubic-bezier(0.15,0.5,0.5,1),
+    opacity 300ms cubic-bezier(0.15,0.5,0.5,1); */
+}
+
+.dot{
+    background: #8d969e;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+/* Network , achivements section */
+
+.network_txt{
+    margin: 48px 0px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.network_txt h2{
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.24px;
+    line-height: 28px;
+    color: rgb(80, 90, 99);
+    margin: 0 0 8px;
+    padding: 0;
+}
+.network_image_bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.network_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.img_style{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 8px;
+    max-width: 146px;
+    min-height: 132.40px;
+    height: 100%;
+    object-fit: contain;
+}
+.network_image img{
+    max-width: 146px;
+    margin-left: 1px;
+}
+.award_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58.39px;
+
+}
+.network_image p, .award p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* customer_card or awards section : network main div not applied any style */
+
+.image_bar3{
+    display: flex;
+    margin: 48px 0;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.award{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 146px;
+    min-height: 110.39px;
+}
+.award img{
+    max-width: 146px;
+}
+.award_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58.40px;
+}
+
 @media screen and (min-width: 425px){
    .header_txt_bar{
     min-width: 270.44px;
@@ -356,16 +545,17 @@ body{
     min-width: 379px;
     min-height: 534.797px;
    }
+   .card_title h2{
+    font-size: 32.285px;
+   }
 }
 
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1023px){
     .header_options_bar{
         display: none;
     }
-    .banner_woman_1024{
-        display: none;
-    }
+    
 }
 
 @media screen and (min-width: 768px) {
@@ -401,6 +591,7 @@ body{
     }
     .card_txt{
         align-items: center;
+        margin-bottom: 24px;
     }
     .card_title h2{
         font-size: 48px;
@@ -408,6 +599,59 @@ body{
     }
     .card_para p{
         text-align: center;
+    }
+    .img{
+        position: absolute;
+        top: 0;
+        width: 100%; 
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
+    .card_img0{
+        display: block;
+        /* left: 50%;
+        transform: translateX(-50%) scale(0.9); */
+        transform: translateX(16px) translateX(-5.4%) scale(0.9);
+    }
+    .card_img1{
+        transform: translateX(106.9%);
+        /* left: 50%;
+        transform: translateX(56%) scale(1); */
+
+    }
+    .card_img2{
+        /* left: 50%;
+        transform: translateX(160%) scale(0.9); */
+        transform: translateX(16px) translateX(205.3%) scale(0.9);
+    }
+    .dots{
+        display: none;
+    }
+    .network_txt h2{
+        text-align: center;
+    }
+    .img_style{
+        max-width: 231px;
+        min-height: 144.39px;
+    }
+    .network_image img{
+        max-width: 231px;
+        margin: 0;
+    }
+    .award_div{
+        min-height: 92.39px;
+    }
+
+    .award{
+        max-width: 316px;
+        min-height: 156.39px;
+    }
+    .award_img{
+        min-height: 126.39px;
+    }
+    .award_img img{
+        max-width: 316px;
+        
     }
 }
 @media screen and (min-width: 850px) {
@@ -513,12 +757,29 @@ body{
     }
     .banner_salary_bar{
         min-width: 428px;
-        min-height: 608.8px;
+        min-height: 605.8px;
         margin-left: 28.8%;
         margin-top: -12.3%;
     }
     .banner_salary_bar img{
         top: -3px;
+    }
+    .card_bar{
+        display: none;
+    }
+    .network_txt{
+        margin: 80px 12px;
+        padding: 0;
+        gap: 56px;
+    }
+    .network_txt h2{
+        font-size: 32px;
+        letter-spacing: -0.32px;
+        line-height: 38px;
+        margin: 0;
+    }
+    .network_image_bar{
+        flex-direction: row;
     }
 }
 
@@ -546,6 +807,9 @@ body{
     margin-top: -15.47%;
     min-height: 606.8px;
    }
+   .network_txt{
+        margin: 80px 220px;
+    }
 }
 
 @media screen and (min-width: 2560px){
@@ -622,5 +886,24 @@ body{
         min-height: 1002.19px;
         margin-top: -10%;
         margin-left: 35%;
+    }
+    .network_txt{
+        margin: 160px 564px;
+        gap: 80px;
+    }
+    .network_txt h2{
+        font-size: 40px;
+        letter-spacing: -0.4px;
+        line-height: 48px;
+    }
+    .network_image_bar{
+        gap: 32px;
+        align-items: normal;
+    }
+    .network_image{
+        gap: 32px;
+    }.network_image p{
+        font-size: 20px;
+        line-height: 28px;
     }
 }
