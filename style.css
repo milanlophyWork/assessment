@@ -1288,16 +1288,17 @@ body{
         flex-direction: row;
         justify-content: space-between;
         align-self: center;
-        padding: 64px 0;
+        padding: 64px 10px;
         max-height: 786.59px;
     }
     .R_logo_txt{
         gap: 24px;
-        padding: 0 0 0 10px;
         text-align: start;
         min-height: 328.41px;
         max-width: 488px;
+        padding: 0;
         align-self: center;
+        margin: 0;
     }
     .R_logo_txt h2{
         font-size: 49.1968px;
@@ -1311,10 +1312,9 @@ body{
         min-height: 600px;
     }
     .video_second video{
-        padding: 0 10px 0 0;
         max-width: 450px;
         min-height: 658.60px;
-    } /* height of video(600)=>  600 + 58.60 = 658*/
+    } /* height of video(600)+ needed height=>  600 + 58.60 = 658*/
 }
 
 
@@ -1370,6 +1370,13 @@ body{
     }
     .savings_txt h2{
         font-size: 52.608px;
+    }
+    .R_logo_bar{
+        padding: 64px 218px;
+    }
+    .R_logo_txt h2{
+        font-size: 52.608px;
+
     }
 }
 
@@ -1571,4 +1578,37 @@ body{
         padding: 14px 32px;
     }
     
+    .R_logo_bar{
+        padding: 80px 564px;
+        max-height: 1310.39px;
+    }
+    .R_logo_txt{
+        gap: 32px;
+        min-height: 432px;
+        max-width: 696px;
+    }
+    .R_logo_txt h2{
+        font-size: 80px;
+        letter-spacing: -0.8px;
+    }
+    .R_logo_txt p{
+        font-size: 24px;
+        line-height: 32px;
+        margin: 24px 0;
+    }
+    .R_logo_txt button{
+        font-size: 20px;
+        min-height: 56px;
+        min-width: 166.77px;
+        line-height: 28px;
+        padding: 14px 32px;
+    }
+    .video_second{
+        min-width: 600px;
+        min-height: 800px;
+    }
+    .video_second video{
+        max-width: 600px;
+        min-height: 1150.40px;
+    } /* 800+ rest needed height to make height 1310.39 (350.39) */
 }
