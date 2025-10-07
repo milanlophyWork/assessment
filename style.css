@@ -2,11 +2,11 @@
     font-family: "regular";
     src: url('./font/AeonikPro-Medium.woff2');
 }
-/* @font-face {
+@font-face {
     font-family: "bold";
     src: url('./font/AeonikPro-Medium.woff2');
 }
- */
+
 @font-face {
     font-family: "semibold";
     src: url('./font/Inter-Regular.woff2');
@@ -331,7 +331,6 @@ body{
     position: relative;
     max-width: 232px;
     min-height: 327.378px;
-    /* width: 100%; */
 }
 .card_img0{
     display: none;
@@ -531,10 +530,10 @@ body{
     min-height: 58.40px;
 }
 
-/* video section */
+/* video section 1 */
 
 .video_bar{
-    padding: 48px 0;
+    padding: 48px 0 0;
     background: black;
     color: white;
 }
@@ -555,7 +554,16 @@ body{
     font-weight: 500;
     line-height: 1;
 }
+.video_txt p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(244,244,244);
+}
 .video_txt button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'regular';
     font-weight: 500;
     font-size: 16px;
@@ -567,6 +575,7 @@ body{
     background: rgb(244,244,244);
     border: none;
     border-radius: 9999px;
+    margin-top: 4px;
     cursor: pointer;
 }
 .video{
@@ -575,21 +584,25 @@ body{
     align-items: center;
     max-width: 388px;
     width: 100%;
-    min-height: 388px;
+    /* min-height: 542px; */
+    min-height: 494px;
     position: relative;
     overflow: hidden;
 }
-video{
+.video_first{
     height: auto;
     width: 100%;
     position: absolute;
-    object-fit: cover;
-    top: -350px;
+    object-fit: contain;
+    top: -319px;
+}
+.video_tab{
+    display: none;
 }
 .video_btn{
     display: flex;
-    flex-direction: row;
-    gap: 12px;
+    /* flex-direction: row;
+    gap: 12px; */
     align-items: center;
     justify-content: center;
     position: relative;
@@ -602,21 +615,226 @@ video{
     line-height: 22px;
     border-radius: 9999px;
     padding: 10px 26px;
-
+    bottom: 50px;
+    min-height: 42px;
+    height: 100%;
 }
 .physical_card{
-    background: rgb(244,244,244);
-    color: black;
-    border: none;
-    left: 5%;
-}
-.virtual_card{
     border: 2px solid rgb(244,244,244);
     color: rgb(244,244,244);
     background: transparent;
-    right: 5%;
-
+    left: 8%;
 }
+.virtual_card{
+    background: rgb(244,244,244);
+    color: black;
+    right: 8%;
+    border: none;
+}
+
+/* Savings section */
+
+.savings_bar{
+    position: relative;
+    overflow: hidden;
+}
+.savings_bg{
+    position: relative;
+    padding: 48px 0 0;
+    min-height: 768px;
+    min-width: 375px;
+}
+.savings_bg_div{
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
+}
+.tab_bg{
+    display: none;
+}
+.savings_img, .tab_bg{
+    position: relative;
+    min-height: 846px;
+    min-width: 375px;
+    height: 100%;
+    width: 100%;
+    color: transparent;
+    object-fit: cover;
+    object-position: center;
+}
+.savings_txt{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 20px;
+    margin-bottom: 24px;
+    color: rgb(244,244,244);
+    position: absolute;
+}
+.savings_txt h2{
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+    /* color: rgb(244,244,244); */
+    margin: 0;
+    padding: 0;
+}
+.para{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.para h3{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.para p{
+    font-family: 'semibold';
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.18px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+.savings_txt button{
+    padding: 10px 24px;
+    background-color: rgb(244,244,244);
+    color: black;
+    border: none;
+    border-radius: 9999px;
+    font-family: 'regular';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    min-height: 42px;
+    min-width: 163.16px;
+    width: min-content;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.savings_salary{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 388px;
+    min-width: 388px;
+    align-self: center;
+}
+.salary_tab{
+    display: none;
+}
+.salary_mobile, .salary_tab{
+    position: absolute;
+    top: 80%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: transparent;
+    object-position: center;
+    object-fit: cover;
+}
+.savings_btn_bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-self: end; */
+    position: absolute;
+    bottom: 40px;
+    gap: 12px;
+    min-width: 375px;
+    min-height: 42px;
+    padding: 0 20px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+.savings_btn_bar button{
+    padding: 10px 26px;
+    max-height: 42px;
+    height: 100%;
+    max-width: 240px;
+    width: min-content;
+    border-radius: 9999px;
+    font-family: 'regular';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    cursor: pointer;
+}
+.savings_btn1{
+    background: rgb(244,244,244);
+    color: black;
+    border: none;
+}
+.savings_btn2, .savings_btn3{
+    background: transparent;
+    border: 2px solid rgb(244,244,244);
+    color: rgb(244,244,244);
+}
+
+/* R logo bar */
+
+.R_logo_bar{
+    padding: 48px 0;
+}
+.R_logo_txt{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 20px;
+    margin-bottom: 24px;
+}
+.R_logo_txt h2{
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+.R_logo_txt p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 18px 0;
+    color: rgb(25, 28, 31);
+}
+.R_logo_txt button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-family: 'regular';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    min-height: 42px;
+    min-width: 130.219px;
+    width: min-content;
+    padding: 10px 24px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.video_second{
+    display: flex;
+    justify-content: center;
+    min-width: 375px;
+    min-height: 446px;
+}
+.video_second video{
+    max-width: 334.5px;
+    min-height: 446px;
+}
+
+
 @media screen and (min-width: 425px){
    .header_txt_bar{
     min-width: 270.44px;
@@ -633,6 +851,36 @@ video{
    }
    .card_title h2{
     font-size: 32.285px;
+   }
+   .video_txt{
+    min-height: 208px;
+   }
+   .video{
+    max-width: 1000px;
+   }
+   .video_first{
+    top: -365px;
+   }
+   .video_btn button{
+    bottom: 48px;
+   }
+   .physical_card{
+    left: 13%;
+   }
+   .virtual_card{
+    right: 13%;
+   }
+   .savings_bg{
+    min-width: 425px;
+   }
+   .savings_btn_bar{
+    justify-self: center;
+    min-width: 425px;
+    bottom: 20px;
+   }
+   .savings_btn_bar button{
+    padding: 10px 24px;
+    
    }
 }
 
@@ -739,6 +987,96 @@ video{
         max-width: 316px;
         
     }
+    .video_txt{
+        align-items: center;
+        min-height: 200px;
+    }
+    .video_txt h2{
+        font-size: 48px;
+        letter-spacing: -0.6px;
+    }
+    .video_first{
+        top: -112px;
+    }
+    .video{
+        max-width: 1030px;
+        min-height: 368px;
+    }
+    .video_mobile{
+        display: none;
+    }
+    .video_tab{
+        display: block;
+    }
+    .physical_card{
+        left: 30%;
+    }
+    .virtual_card{
+        right: 29%;
+    }
+    .savings_bar{
+        max-height: 640px;
+        height: 100%;
+    }
+    .savings_bg{
+        min-height: 600px;
+        /* min-width: 768px; */
+    }
+    .savings_txt{
+        align-items: center;
+        text-align: center;
+    }
+    .savings_txt h2{
+        font-size: 48px;
+        letter-spacing: -0.6px;
+    }
+    .para{
+        gap: 8px;
+    }
+    .mobile_bg{
+        display: none;
+    }
+    .tab_bg{
+        display: block;
+        min-height: 640px;
+        min-width: 768px;
+    }
+    .salary_tab{
+        display: block;
+        top: 67%;
+        left: 21.5%;
+        /* min-width: 436px;
+        min-height: 218px; */
+        max-width: 436px;
+        max-height: 218px;
+    }
+    .salary_mobile{
+        display: none;
+    }
+    .savings_btn_bar{
+        bottom: 54px;
+    }
+
+    .R_logo_txt{
+        text-align: center;
+        justify-self: center;
+    }
+    .R_logo_txt h2{
+        font-size: 48px;
+        letter-spacing: -0.6px;
+    }
+    .R_logo_txt button{
+        align-self: center;
+    }
+    .video_second{
+        min-height: 310px;
+        min-width: 768px;
+    }
+    .video_second video{
+        max-width: 232.5px;
+        min-height: 310px;
+    }
+    
 }
 @media screen and (min-width: 850px) {
     .banner_salary_bar{
@@ -867,6 +1205,116 @@ video{
     .network_image_bar{
         flex-direction: row;
     }
+    .image_bar3{
+        margin: 48px 0 80px;
+    }
+    .video_bar{
+        padding: 64px 0 0;
+    }
+    .video_txt{
+        max-width: 600px;
+        min-height: 221.2px;
+        gap: 24px;
+        justify-self: center;
+        text-align: center;
+    }
+    .video_txt h2{
+        font-size: 49.1968px;
+    }
+    .video_txt button{
+        margin-top: 8px;
+    }
+    .video{
+        min-height: 564.82px;
+        max-width: 1444px;
+    }
+    .video_first{
+        top: -75px;
+    }
+    .video_btn button{
+        bottom: 64px;
+    }
+    .physical_card{
+        left: 35%;
+        max-width: 152.22px;
+        white-space: nowrap;
+    }
+    .virtual_card{
+        right: 35%;
+        min-width: 143.19px;
+        white-space: nowrap;
+    }
+
+    .savings_bar{
+        max-height: 874px;
+    }
+    .savings_bg{
+        padding: 64px 0 0;
+        min-height: 874px;
+    }
+    .tab_bg{
+        display: none;
+    }
+    .mobile_bg{
+        display: block;
+        max-height: 874px;
+    }
+    .savings_txt{
+        justify-self: center;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+    .savings_txt h2{
+        font-size: 49.1968px;
+    }
+    .salary_tab{
+        min-height: 388px;
+        min-width: 388px;
+        top: 78%;
+        left: 28.5%;
+    }
+    .para{
+        max-width: 600px;
+    }
+    .savings_txt button{
+        margin-top: 8px;
+    }
+    .savings_btn_bar{
+        bottom: 13.5%;
+    }
+    
+    .R_logo_bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: center;
+        padding: 64px 0;
+        max-height: 786.59px;
+    }
+    .R_logo_txt{
+        gap: 24px;
+        padding: 0 0 0 10px;
+        text-align: start;
+        min-height: 328.41px;
+        max-width: 488px;
+        align-self: center;
+    }
+    .R_logo_txt h2{
+        font-size: 49.1968px;
+    }
+    .R_logo_txt button{
+        margin-top: 8px;
+        align-self: start;
+    }
+    .video_second{
+        min-width: 450px;
+        min-height: 600px;
+    }
+    .video_second video{
+        padding: 0 10px 0 0;
+        max-width: 450px;
+        min-height: 658.60px;
+    } /* height of video(600)=>  600 + 58.60 = 658*/
 }
 
 
@@ -895,6 +1343,33 @@ video{
    }
    .network_txt{
         margin: 80px 220px;
+    }
+    .video_txt{
+        min-height: 220.61px;
+        margin-bottom: 32px;
+    }
+    .video_txt h2{
+        font-size: 52.608px;
+    }
+    .video_first{
+        top: -343px;
+    }
+    .video{
+        min-height: 557.40px;
+        max-width: 2560px;
+    }
+    .video_btn button{
+        bottom: 64px;
+    }
+    .physical_card{
+        left: 39.5%;
+    }
+    .virtual_card{
+        max-width: 139.19px;
+        right: 39%;
+    }
+    .savings_txt h2{
+        font-size: 52.608px;
     }
 }
 
@@ -992,4 +1467,108 @@ video{
         font-size: 20px;
         line-height: 28px;
     }
+    .video_bar{
+        padding: 80px 0 0;
+    }
+    .video_txt{
+        max-width: 1432px;
+        min-height: 300px;
+        gap: 32px;
+        margin-bottom: 48px;
+    }
+    .video_txt h2{
+        font-size: 80px;
+        letter-spacing: -0.8px;
+    }
+    .video_txt p{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .video_txt button{
+        font-size: 20px;
+        line-height: 28px;
+        padding: 14px 32px;
+        min-width: 186.969px;
+        min-height: 56px;
+    }
+    .video{
+        min-height: 1028px;
+    }
+    .video_first{
+        top: -573px;
+    }
+    .video_btn button{
+        min-height: 56px;
+        bottom: 72px;
+        font-size: 20px;
+        line-height: 28px;
+        bottom: 75px;
+        padding: 14px 34px;
+    }
+    .physical_card{
+        max-width: 198.27px;
+        left: 42%;
+    }
+    .virtual_card{
+        max-width: 181.98px;
+        right: 42.5%;
+    }
+
+    .savings_bar{
+        max-height: 1456px;
+    }
+    .savings_bg{
+        padding: 80px 0 0;
+        min-height: 1456px;
+    }
+    .mobile_bg{
+        max-height: 1456px;
+    }
+    .savings_txt{
+        gap: 32px;
+        margin-bottom: 48px;
+    }
+    .savings_txt h2{
+        font-size: 80px;
+        letter-spacing: -0.8px;
+    }
+    .para{
+        min-width: 1146px;
+    }
+    .para h3{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .para p{
+        font-size: 16px;
+        letter-spacing: 0.24px;
+        line-height: 24px;
+    }
+    .savings_txt button{
+        padding: 14px 32px;
+        font-size: 20px;
+        line-height: 28px;
+        min-height: 56px;
+        min-width: 207.953px;
+    }
+    .savings_salary{
+        min-width: 1436px;
+        min-height: 718px;
+    }
+    .salary_tab{
+        max-width: 1139px;
+        max-height: 750px;
+        top: 60%;
+        left: 28%;
+    }
+    .savings_btn_bar{
+        bottom: 10%;
+    }
+    .savings_btn_bar button{
+        font-size: 20px;
+        line-height: 28px;
+        min-height: 56px;
+        padding: 14px 32px;
+    }
+    
 }
