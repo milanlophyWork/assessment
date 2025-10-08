@@ -856,6 +856,7 @@ body{
 .video_third{
     display: flex;
     justify-content: center;
+    justify-self: center;
     min-width: 375px;
     min-height: 388px;
 }
@@ -1808,6 +1809,7 @@ body{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        justify-self: center;
         align-self: center;
         padding: 64px 10px;
         max-height: 786.59px;
