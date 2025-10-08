@@ -744,7 +744,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* justify-self: end; */
     position: absolute;
     bottom: 40px;
     gap: 12px;
@@ -778,19 +777,19 @@ body{
     color: rgb(244,244,244);
 }
 
-/* R logo bar */
+/* R logo bar and coin-video section */
 
-.R_logo_bar{
+.R_logo_bar,.coin_video_bar{
     padding: 48px 0;
 }
-.R_logo_txt{
+.R_logo_txt,.coin_video_txt{
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 0 20px;
     margin-bottom: 24px;
 }
-.R_logo_txt h2{
+.R_logo_txt h2, .coin_video_txt h2{
     font-size: 36px;
     font-weight: 500;
     line-height: 1;
@@ -804,7 +803,7 @@ body{
     margin: 18px 0;
     color: rgb(25, 28, 31);
 }
-.R_logo_txt button{
+.R_logo_txt button, .coin_video_txt button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -834,7 +833,126 @@ body{
     min-height: 446px;
 }
 
+/* Third video section */
 
+.coin_video_bar{
+    background-color: black;
+}
+.coin_video_txt{
+    color: rgb(244,244,244);
+    min-height: 318px;
+
+}
+.coin_video_txt p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.coin_video_txt button{
+    background-color: rgb(244,244,244);
+    color: black;
+    min-width: 111.797px;
+}
+.video_third{
+    display: flex;
+    justify-content: center;
+    min-width: 375px;
+    min-height: 388px;
+}
+.coin2{
+    display: none;
+}
+.video_third video{
+    max-width: 326.95px;
+    min-height: 388px;
+}
+.coin_btn_bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 303.44px;
+    max-height: 42px;
+    padding: 0 20px;
+    margin-top: 16px;
+}
+.coin_btn_bar button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'regular';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    border-radius: 9999px;
+    max-height: 42px;
+    padding: 10px 26px;
+    cursor: pointer;
+}
+.coin_btn1{
+    max-width: 101.92px;
+    width: min-content;
+}
+.coin_btn2{
+    background: transparent;
+    border: 2px solid rgb(244,244,244);
+    color: rgb(244,244,244);
+    max-width: 149.52px;
+    width: min-content;
+}
+
+/* conclusion section */
+
+.conclusion_header{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 20px;
+    margin: 48px 0;
+}
+.conclusion_header h2{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+.conclusion_header button{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    font-family: 'regular';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    min-height: 42px;
+    min-width: 181.531px;
+    padding: 10px 24px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 9999px;
+    background: #191c2f;
+    color: white;
+    cursor: pointer;
+}
+.conclusion_para{
+    padding: 0 20px 60px;
+}
+.conclusion_para p{
+    font-family: 'semibold';
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.18px;
+    line-height: 18px;
+    margin: 0 0 20px;
+    color: rgb(25,18,31);
+}
+.conclusion_para a{
+    color: rgb(25, 18, 31);
+    text-decoration: underline;
+}
 @media screen and (min-width: 425px){
    .header_txt_bar{
     min-width: 270.44px;
@@ -880,8 +998,14 @@ body{
    }
    .savings_btn_bar button{
     padding: 10px 24px;
-    
    }
+   .coin_video_txt{
+    min-height: 258px;
+   }
+   .conclusion_header h2{
+    font-size: 32.285px;
+   }
+
 }
 
 
@@ -919,9 +1043,12 @@ body{
         height: 0%;
     }
     .banner_salary_bar{
-        max-width: 427.547px;
+        min-width: 427.547px;
         min-height: 603.312px;
-        margin-left: 147px;
+        /* margin-left: 147px; */
+        display: flex;
+        align-items: center;
+        justify-self: center;
     }
     .card_txt{
         align-items: center;
@@ -1057,15 +1184,20 @@ body{
         bottom: 54px;
     }
 
-    .R_logo_txt{
+    .R_logo_txt,
+    .conclusion_header{
         text-align: center;
         justify-self: center;
     }
-    .R_logo_txt h2{
+    .R_logo_txt h2,
+    .coin_video_txt h2, 
+    .conclusion_header h2{
         font-size: 48px;
         letter-spacing: -0.6px;
     }
-    .R_logo_txt button{
+    .R_logo_txt button,
+    .coin_video_txt button,
+    .conclusion_header button{
         align-self: center;
     }
     .video_second{
@@ -1076,12 +1208,34 @@ body{
         max-width: 232.5px;
         min-height: 310px;
     }
-    
+    .coin_video_txt{
+        text-align: center;
+        min-height: 222px;
+    }
+    .coin_video_txt button{
+        align-self: center;
+    }
+    .coin1{
+        display: none;
+    }
+    .coin2{
+        display: flex;
+        justify-content: center;
+        min-height: 232px;
+        min-width: 768px;
+    }
+    .video_third video{
+        max-width: 464px;
+        min-height: 232px;
+    }
+    .coin_btn_bar{
+        margin-top: 24px;
+    }
 }
 @media screen and (min-width: 850px) {
-    .banner_salary_bar{
+    /* .banner_salary_bar{
         margin-left: 188px;
-    }
+    } */
     .banner_salary_bar img{
         top: 0;
     }
@@ -1182,7 +1336,6 @@ body{
     .banner_salary_bar{
         min-width: 428px;
         min-height: 605.8px;
-        margin-left: 28.8%;
         margin-top: -12.3%;
     }
     .banner_salary_bar img{
@@ -1315,8 +1468,44 @@ body{
         max-width: 450px;
         min-height: 658.60px;
     } /* height of video(600)+ needed height=>  600 + 58.60 = 658*/
-}
 
+    .coin_video_bar{
+        padding: 64px 12px;
+    }
+    .coin_video_txt{
+        gap: 24px;
+        margin-bottom: 32px;
+        min-height: 243.203px;
+        max-width: 1000px;
+        text-align: center;
+        justify-self: center;
+    }
+    .coin_video_txt h2{
+        font-size: 49.1968px;
+    }
+    .coin_video_txt button{
+        margin-top: 8px;
+    }
+    .video_third{
+        min-height: 404.8px;
+        max-width: 1000px;
+    }
+    .video_third video{
+        max-width: 809.59px;
+        min-height: 404.8px;
+    }
+    .conclusion_header{
+        margin: 80px 12px;
+        gap: 24px;
+    }
+    .conclusion_header h2{
+        font-size: 49.1968px;
+    }
+    .conclusion_para{
+        padding: 0 0 60px;
+        margin: 0 12px;
+    }
+}
 
 @media screen and (min-width: 1440px){
    .header{
@@ -1337,7 +1526,6 @@ body{
 
    }
    .banner_salary_bar{
-    margin-left: 34.9%;
     margin-top: -15.47%;
     min-height: 606.8px;
    }
@@ -1371,12 +1559,28 @@ body{
     .savings_txt h2{
         font-size: 52.608px;
     }
-    .R_logo_bar{
-        padding: 64px 218px;
+    .R_logo_bar, .coin_video_bar{
+        padding: 64px 220px;
     }
-    .R_logo_txt h2{
+    .R_logo_txt h2, 
+    .coin_video_txt h2,
+    .conclusion_header h2{
         font-size: 52.608px;
-
+    }
+    .coin2{
+        min-width: 1000px;
+        min-height: 401.40px;
+    }
+    .coin2 video{
+        max-width: 802.78px;
+        min-height: 401.40px;
+    }
+    .conclusion_header{
+        margin: 80px 220px;
+    }
+    .conclusion_para{
+        padding: 0 0 120px;
+        margin: 0 220px;
     }
 }
 
@@ -1453,7 +1657,6 @@ body{
         min-width: 722.27px;
         min-height: 1002.19px;
         margin-top: -10%;
-        margin-left: 35%;
     }
     .network_txt{
         margin: 160px 564px;
@@ -1587,16 +1790,20 @@ body{
         min-height: 432px;
         max-width: 696px;
     }
-    .R_logo_txt h2{
+    .R_logo_txt h2, 
+    .coin_video_txt h2,
+    .conclusion_header h2{
         font-size: 80px;
         letter-spacing: -0.8px;
     }
-    .R_logo_txt p{
+    .R_logo_txt p,
+    .coin_video_txt p{
         font-size: 24px;
         line-height: 32px;
         margin: 24px 0;
     }
-    .R_logo_txt button{
+    .R_logo_txt button,
+    .coin_video_txt button{
         font-size: 20px;
         min-height: 56px;
         min-width: 166.77px;
@@ -1611,4 +1818,53 @@ body{
         max-width: 600px;
         min-height: 1150.40px;
     } /* 800+ rest needed height to make height 1310.39 (350.39) */
+
+    .coin_video_bar{
+        padding: 80px 564px;
+        max-height: 1456px;
+    }
+    .coin_video_txt{
+        gap: 32px;
+        min-height: 336px;
+        max-width: 1432px;
+        margin: 0 0 48px;
+    }
+    .coin_video_txt p{
+        margin: 0;
+    }
+    .coin_video_txt button{
+        min-width: 143.75px;
+    }
+    .video_third{
+        min-width: 1436px;
+        min-height: 718px;
+    }
+    .video_third video{
+        max-width: 1436px;
+        min-height: 824px;
+    }
+    .coin_btn_bar{
+        max-height: 56px;
+        margin-top: 32px;
+    }
+    .coin_btn_bar button,
+    .conclusion_header button{
+        padding: 14px 32px;
+        font-size: 20px;
+        line-height: 28px;
+        max-height: 56px;
+    }
+    .coin_btn1{
+        max-width: 130.41px;
+    }
+    .coin_btn2{
+        max-width: 185.89px;
+    }
+    .conclusion_header{
+        margin: 160px 564px;
+        gap: 32px;
+    }
+    .conclusion_para{
+        margin: 0 564px;
+    }
 }
